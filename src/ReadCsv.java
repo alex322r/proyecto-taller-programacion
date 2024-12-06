@@ -6,13 +6,15 @@ import java.util.List;
 
 public class ReadCsv {
 
-    String csvFilePath;
+    private String csvFilePath;
     private List<String[]> rows;
+
 
     public ReadCsv(String csvFilePath) {
 
         this.csvFilePath = csvFilePath;
-        this.rows = new ArrayList<>();
+        this.rows = new ArrayList<String[]>();
+
 
         try {
             BufferedReader br = new BufferedReader(new FileReader(this.csvFilePath));
@@ -21,15 +23,17 @@ public class ReadCsv {
                 String[] cols = line.split(",");
                 this.rows.add(cols);
             }
+            br.close();
         } catch (IOException e) {
             System.out.println(e.getMessage());
             e.printStackTrace();
         }
 
+
     }
 
-    public List <String[]> getRows() {
-        return this.rows;
+    public ArrayList <String[]> getRows() {
+        return (ArrayList<String[]>) this.rows;
     }
 
     public void print() {

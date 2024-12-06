@@ -22,6 +22,29 @@ public class User {
 
     }
 
-
+    public String getDni() {
+        return dni;
+    }
+    public String getPrimerApellido() {
+        return primerApellido;
+    }
+    public String getSegundoApellido() {
+        return segundoApellido;
+    }
+    public String getNombres() {
+        return nombres;
+    }
+    public String getCodigoUbigeo() {
+        return codigoUbigeo;
+    }
+    public String getDepartamento() {
+        return departamento;
+    }
+    public String getProvincia() {
+        return provincia;
+    }
+    public String getDistrito() {
+        return distrito;
+    }
 
 }
